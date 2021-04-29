@@ -1,5 +1,5 @@
 # VDID
-[Variational Deep Image Denoising]
+# [Variational Deep Image Denoising](https://arxiv.org/pdf/2104.00965.pdf)
 
 Jae Woong Soh and Nam Ik Cho
 
@@ -70,7 +70,7 @@ python generate_AWGN.py --labelpath DIV2K_train_HR/*.png
 python generate_REAL.py --labelpath DIV2K_train_HR/*.png --datapath DIV2K_train_REAL_NOISE/*.png --labelpath2 SIDD/GT/*.PNG --datapath2 SIDD/NOISY/*.PNG
 ```
 
-### Train MZSR
+### Train VDID
 
 **AWGN Denoising**
 
@@ -107,7 +107,7 @@ python main.py --gpu [GPU_number] --model [Type of model] --inputpath [dataset p
 --sigma: Noise level (Effective only for AWGN) [Default: 10]
 
 --noisy: A flag whether input images are clean images or noisy images.
-	-> input as a clean image to synthesize a noisy image, then fed to the network.
+	-> input as a clean image to synthesize a noisy image which will be fed to the network.
 	-> input as a noisy image directly fed to the network.
 ```
 
