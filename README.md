@@ -1,9 +1,9 @@
-# VDID
-# [Variational Deep Image Denoising](https://arxiv.org/pdf/2104.00965.pdf)
+# VDIR
+# Variational Deep Image Restoration & <p> [Variational Deep Image Denoising](https://arxiv.org/pdf/2104.00965.pdf)
 
 Jae Woong Soh and Nam Ik Cho
 
-[[Arxiv](https://arxiv.org/abs/2104.00965)]
+VDID [[Arxiv](https://arxiv.org/abs/2104.00965)]
 
 ## Environments
 - Ubuntu 18.04
@@ -11,7 +11,7 @@ Jae Woong Soh and Nam Ik Cho
 - CUDA 11.2 & cuDNN
 - Python 3.7
 
-## Abstract
+## Abstract (VDID)
 
 Convolutional neural networks (CNNs) have shown outstanding performance on image denoising with the help of large-scale datasets. Earlier methods naively trained a single CNN with many pairs of clean-noisy images. However, the conditional distribution of the clean image given a noisy one is too complicated and diverse, so that a single CNN cannot well learn such distributions. Therefore, there have also been some methods that exploit additional noise level parameters or train a separate CNN for a specific noise level parameter. These methods separate the original problem into easier sub-problems and thus have shown improved performance than the naively trained CNN. In this step, we raise two questions. The first one is whether it is an optimal approach to relate the conditional distribution only to noise level parameters. The second is what if we do not have noise level information, such as in a real-world scenario. To answer the questions and provide a better solution, we propose a novel Bayesian framework based on the variational approximation of objective functions. This enables us to separate the complicated target distribution into simpler sub-distributions. Eventually, the denoising CNN can conquer noise from each sub-distribution, which is generally an easier problem than the original. Experiments show that the proposed method provides remarkable performance on additive white Gaussian noise (AWGN) and real-noise denoising while requiring fewer parameters than recent state-of-the-art denoisers.
 <br><br>
@@ -33,6 +33,12 @@ The overall architecture of proposed VDID, where <i><b>k</b></i>, <b><i>s</i></b
 **Results on Real-Noise (SIDD/DND)**
 
 <p align="center"><img src="figure/result_REAL.png" width="900"></p>
+
+## Additional Visualized Results
+
+<p align="center"><img src="figure/Denoising.png" width="900"></p>
+<p align="center"><img src="figure/JPEG_AR.png" width="900"></p>
+<p align="center"><img src="figure/Blind_SR.png" width="900"></p>
 
 ## Guidelines for Codes
 
