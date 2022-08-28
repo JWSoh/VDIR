@@ -1,9 +1,15 @@
 # VDIR
-# Variational Deep Image Restoration & <p> [Variational Deep Image Denoising](https://arxiv.org/pdf/2104.00965.pdf)
+[Variational Deep Image Restoration](https://arxiv.org/pdf/2207.01074.pdf)
+# TIP 2022
+[Variational Deep Image Denoising](https://arxiv.org/pdf/2104.00965.pdf)
 
 Jae Woong Soh and Nam Ik Cho
 
 VDID [[Arxiv](https://arxiv.org/abs/2104.00965)]
+VDIR [[Paper](https://ieeexplore.ieee.org/document/9804226)] [[Arxiv](https://arxiv.org/abs/2207.01074)]
+
+## Supplementary Material
+[[Supplemental](https://drive.google.com/file/d/1p12vhVvLLvLBUmen3SdjYiJyN_X71c4t/view?usp=sharing)]
 
 ## Environments
 - Ubuntu 18.04
@@ -33,6 +39,15 @@ The overall architecture of proposed VDID, where <i><b>k</b></i>, <b><i>s</i></b
 **Results on Real-Noise (SIDD/DND)**
 
 <p align="center"><img src="figure/result_REAL.png" width="900"></p>
+
+**Results on Blind Super-Resolution**
+
+<p align="center"><img src="figure/result_SR.png" width="900"></p>
+
+**Results on JPEG compression artifacts reduction**
+
+<p align="center"><img src="figure/result_JPEG.png" width="900"></p>
+
 
 ## Additional Visualized Results
 
@@ -76,7 +91,7 @@ python generate_AWGN.py --labelpath DIV2K_train_HR/*.png
 python generate_REAL.py --labelpath DIV2K_train_HR/*.png --datapath DIV2K_train_REAL_NOISE/*.png --labelpath2 SIDD/GT/*.PNG --datapath2 SIDD/NOISY/*.PNG
 ```
 
-### Train VDID
+### Train VDIR
 
 **AWGN Denoising**
 
@@ -124,5 +139,13 @@ python main.py --gpu [GPU_number] --model [Type of model] --inputpath [dataset p
   author={Soh, Jae Woong and Cho, Nam Ik},
   journal={arXiv preprint arXiv:2104.00965},
   year={2021}
+}
+
+@article{soh2022variational,
+  title={Variational Deep Image Restoration},
+  author={Soh, Jae Woong and Cho, Nam Ik},
+  journal={IEEE Transactions on Image Processing},
+  year={2022},
+  publisher={IEEE}
 }
 ```
